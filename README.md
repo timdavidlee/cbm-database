@@ -29,6 +29,12 @@ Second the excel sheets for assignments
 - https://www.dropbox.com/scl/fi/jdgnix1i6btdbjwvr99vv/Cabin-Assignments-2017-073017.xlsx?rlkey=64csa7gcwx5ch75dxgebia3q9&st=kbt6werh&dl=0
 ```
 
+## How to Export (requires a Windows Machine + MS Office)
+
+Open the database with `MS Access` an offline database tool made by `microsoft`
+
+1. Export the `General Information` data sheet with the most rows as `xslx` which can be read by python
+2. Export the the `HS` for high school, and `JH` for middle school, as `xslx` which can be read by python
 
 ## Ask (in 2019):
 
@@ -49,7 +55,7 @@ eval the db structure to see if anything can be improved. split up the table? ad
 find a better way to record a camper's counselor. right now, i use a query to build a list of the counselors' names, but that field doesn't actually point to a counselor's record.
 ```
 
-# Long Term Goals
+## Long Term Goals
 ```
 instead of a db per camp year, create one unified database with a year field.
 
@@ -59,4 +65,14 @@ long term goal #1 allows us to do analytics like seeing a camper's counselor his
 automate cabin assignments. allow the directors to manually assign certain campers to a cabin and counselor. then use code to place the remaining campers.
 
 make the db easy to use so that someone without access experience can use it.
+```
+
+
+# Setting up `python` with `pyenv`
+
+```sh
+pyenv install 3.11.8
+pyenv virtualenv 3.11.8 cbm-db-3.11.8
+echo cbm-db-3.11.8 > .python-version
+pip install -r requirements.txt
 ```
